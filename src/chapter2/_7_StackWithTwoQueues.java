@@ -1,13 +1,13 @@
 package chapter2;
-
+/*
+ * 两个队列实现栈*/
 import java.util.LinkedList;
 import java.util.Queue;
-//两个队列实现栈功能
+
 public class _7_StackWithTwoQueues<T> {
 	private Queue<T> q1 = new LinkedList<>();
 	private Queue<T> q2 = new LinkedList<>();
-
-	// 进栈操作
+//	入栈操作
 	public void push(T element) {
 		if (q2.size() == 0) {
 			q1.add(element);
@@ -29,5 +29,4 @@ public class _7_StackWithTwoQueues<T> {
 			return q2.poll();
 		}
 	}
-
 }
