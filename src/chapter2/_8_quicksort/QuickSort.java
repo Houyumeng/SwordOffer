@@ -10,16 +10,16 @@ public class QuickSort {
 		int i = left + 1;
 		int j = right - 2;
 		for (;;) {
-			if (i < j) {
+			while (i<=right-2&&a[i].compareTo(pivot) < 0) {
+				i++;
+			}
+			while (j>=left+1&&a[j].compareTo(pivot) > 0) {
+				j--;
+			}
+			if (i <= j) {
 				swap(a, i, j);
 			} else
 				break;
-			while (a[i].compareTo(pivot) < 0) {
-				i++;
-			}
-			while (a[j].compareTo(pivot) > 0) {
-				j--;
-			}
 		}
 		swap(a, i, right - 1);
 		qSort(a, left, i - 1);
