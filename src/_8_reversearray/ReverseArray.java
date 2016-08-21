@@ -1,6 +1,6 @@
 package _8_reversearray;
 
-//旋转数组输出最小值
+/*输出旋转数组的最小值*/
 public class ReverseArray {
 	public static int min(int[] a) throws Exception {
 		if (a == null || a.length <= 0) {

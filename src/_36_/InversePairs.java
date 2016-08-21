@@ -38,9 +38,11 @@ public class InversePairs {
 		}
 		for (; i >= start; i--) {
 			copy[indexofCopy] = array[i];
+			indexofCopy--;
 		}
 		for (; j >= start + length + 1; j--) {
 			copy[indexofCopy] = array[j];
+			indexofCopy--;
 		}
 		return count + left + right;
 	}
