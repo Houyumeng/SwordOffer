@@ -1,14 +1,15 @@
 package _6_;
 
 import java.util.Arrays;
+
 //未实现输入出现相同数时报错，和两遍历量分别相等
-public class _6_ConstructBinaryTree {
+public class ConstructBinaryTree {
 	public static BinaryTreeNode construct(int[] preorder, int[] inorder) throws Exception {
 		if (preorder == null || inorder == null) {
 			return null;
 		}
 		if (preorder.length != inorder.length) {
-			throw new Exception("输入有误");
+			throw new Exception("error:invalid input");
 		}
 
 		BinaryTreeNode root = new BinaryTreeNode();
