@@ -2,7 +2,7 @@ package _14_;
 
 public class ReorderTest {
 	public static void main(String[] args) {
-		int[] a = { 2, 1, 1, 5, 1, 1, 3, 7, 1 };
+		int[] a = { 0, 1, 1, 5, 1, 1, 3, 7, 1 };
 		int[] aOrdered;
 		try {
 			aOrdered = Reorder.reorder(a);

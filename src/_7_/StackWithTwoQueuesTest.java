@@ -1,9 +1,9 @@
 package _7_;
 
-public class _7_StackWithTwoQueuesTest {
+public class StackWithTwoQueuesTest {
 
 	public static void main(String[] args) {
-		_7_StackWithTwoQueues<String> sq = new _7_StackWithTwoQueues<>();
+		StackWithTwoQueues<String> sq = new StackWithTwoQueues<>();
 		sq.push("a");
 		sq.push("b");
 		sq.push("c");

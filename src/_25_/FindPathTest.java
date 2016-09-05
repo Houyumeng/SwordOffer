@@ -4,7 +4,7 @@ public class FindPathTest {
 
 	public static void main(String[] args) {
 		BinaryTreeNode root1 = new BinaryTreeNode();
-		root1.data = 10;
+		root1.data = 17;
 		BinaryTreeNode root2 = new BinaryTreeNode();
 		root2.data = 5;
 		BinaryTreeNode root3 = new BinaryTreeNode();
@@ -18,12 +18,6 @@ public class FindPathTest {
 		root1.rightTreeNode = root3;
 		root2.leftTreeNode = root4;
 		root2.rightTreeNode = root5;
-		root3.leftTreeNode = null;
-		root3.rightTreeNode = null;
-		root4.leftTreeNode = null;
-		root4.rightTreeNode = null;
-		root5.leftTreeNode = null;
-		root5.rightTreeNode = null;
 
 		try {
 			FindPath.findPath(root1, 22);

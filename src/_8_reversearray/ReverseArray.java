@@ -8,9 +8,11 @@ public class ReverseArray {
 		}
 		int index1 = 0;
 		int index2 = a.length - 1;
+		// 未旋转
 		if (a[index2] > a[index1]) {
 			return a[index1];
 		}
+		
 		while (index2 - index1 > 1) {
 			int mid = (index1 + index2) / 2;
 			// 当a[index1]==a[mid]==a[index2]时,用顺序查找

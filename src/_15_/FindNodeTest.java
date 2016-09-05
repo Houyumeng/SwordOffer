@@ -16,8 +16,8 @@ public class FindNodeTest {
 		node4.next = null;
 		node4.data = 4;
 
-		ListNode node = FindNode.findNodeOfKFromTail(headNode, 2);
-		System.out.println(node.data);
+		ListNode node = FindNode.findNodeOfKFromTail(headNode, 8);
+		System.out.println(node);
 	}
 
 }

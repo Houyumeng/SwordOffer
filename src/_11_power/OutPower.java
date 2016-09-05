@@ -2,20 +2,20 @@ package _11_power;
 
 //数值的整数次方
 public class OutPower {
-	// 方法二：求n次方公式
+	// 方法二：求n次方公式(报错)
 	public static double power1(double base, int exponent) {
 		if (exponent == 0) {
 			return 1;
 		}
-		if (base == 1) {
+		if (exponent == 1) {
 			return base;
 		}
 		// exponent>>1比exponent/2快
 		double result = power1(base, exponent >> 1);
 		result *= result;
 		// exponent&0X1为取余
-		if ((exponent & 0X1) == 1) {
-			result = result * base;
+		if ((exponent & 1) == 1) {
+			result*= base;
 		}
 		return result;
 	}
@@ -24,7 +24,7 @@ public class OutPower {
 	public static double power(double base, int exponent) throws Exception {
 		double result = 1;
 		if (Math.abs(base - 0.0) < 1e-6 && exponent < 0) {
-			throw new Exception("输入错误！");
+			throw new Exception("error:invalid input");
 		}
 		if (exponent >= 0) {
 			for (int i = 0; i < exponent; i++) {

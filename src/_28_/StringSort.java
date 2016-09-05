@@ -12,6 +12,7 @@ public class StringSort {
 
 	private static void permutation(char[] str, int begin) {
 
+		// 边界条件
 		if (begin == str.length) {
 			System.out.println(str);
 		}
@@ -23,7 +24,7 @@ public class StringSort {
 				str[i] = temp;
 
 				permutation(str, begin + 1);
-
+				// 交换完还得交换回来才能str[begin]不变
 				temp = str[begin];
 				str[begin] = str[i];
 				str[i] = temp;

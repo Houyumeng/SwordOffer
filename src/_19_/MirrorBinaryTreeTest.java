@@ -23,23 +23,9 @@ public class MirrorBinaryTreeTest {
 		p1.rightNext = p3;
 		p2.leftNext = p4;
 		p2.rightNext = p5;
-		p3.leftNext = null;
 		p3.rightNext = p8;
-		p4.leftNext = null;
-		p4.rightNext = null;
 		p5.leftNext = p6;
 		p5.rightNext = p7;
-		p6.leftNext = null;
-		p6.rightNext = null;
-		p7.leftNext = null;
-		p7.rightNext = null;
-		p8.leftNext = null;
-		p8.rightNext = null;
-		try {
 			MirrorBinaryTree.mirror(p1);
-			System.out.println(p7.leftNext.data);
-		} catch (Exception e) {
-			System.out.println(e.getMessage());
-		}
 	}
 }

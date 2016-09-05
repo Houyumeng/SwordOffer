@@ -29,14 +29,19 @@ public class MinParentNodeTest {
 		node1.right = node3;
 		node2.left = node4;
 		node2.right = node5;
-		node4.left = node6; 
+		node4.left = node6;
 		node4.right = node7;
 		node5.left = node8;
 		node5.right = node9;
 		node3.left = node10;
 		node3.right = node11;
-		ListNode resultNode = MinParentNode.getMinParentNode(node1, node7, node6);
-		System.out.println(resultNode.data);
+		ListNode resultNode;
+		try {
+			resultNode = MinParentNode.getMinParentNode(node1, node7, node6);
+			System.out.println(resultNode.data);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
 	}
 
 }

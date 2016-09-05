@@ -4,7 +4,7 @@ package _7_;
 import java.util.LinkedList;
 import java.util.Queue;
 
-public class _7_StackWithTwoQueues<T> {
+public class StackWithTwoQueues<T> {
 	private Queue<T> q1 = new LinkedList<>();
 	private Queue<T> q2 = new LinkedList<>();
 //	ÈëÕ»²Ù×÷

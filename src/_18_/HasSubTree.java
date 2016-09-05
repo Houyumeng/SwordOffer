@@ -5,7 +5,7 @@ public class HasSubTree {
 	public static boolean hasSubTree(BinaryTreeNode root1, BinaryTreeNode root2) {
 		boolean result = false;
 
-		if (root1 != null & root2 != null) {
+		if (root1 != null && root2 != null) {
 			if (root1.data == root2.data) {
 				result = doesTree1HasTree2(root1, root2);
 			}

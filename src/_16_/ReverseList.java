@@ -5,19 +5,19 @@ package _16_;
 
 public class ReverseList {
 	public static ListNode reverseList(ListNode pHead) {
-		ListNode pPre = null;
-		ListNode pNow = pHead;
-		ListNode pReversedHead = null;
-		while (pNow != null) {
-			ListNode pNext = pNow.next;
-			if (pNext == null) {
-				pReversedHead = pNow;
+		ListNode pre = null;
+		ListNode now = pHead;
+		ListNode reversedHead = null;
+		while (now != null) {
+			ListNode node = now.next;
+			if (node == null) {
+				reversedHead = now;
 			}
-			pNow.next = pPre;
-			pPre = pNow;
-			pNow = pNext;
+			now.next = pre;
+			pre = now;
+			now = node;
 		}
-		return pReversedHead;
+		return reversedHead;
 	}
 }
 

@@ -1,9 +1,9 @@
 package _7_;
 
-public class _7_QueueWithTwoStacksTest {
+public class QueueWithTwoStacksTest {
 
 	public static void main(String[] args) {
-		_7_QueueWithTwoStacks<String> q = new _7_QueueWithTwoStacks<>();
+		QueueWithTwoStacks<String> q = new QueueWithTwoStacks<>();
 		q.appendTail("hello");
 		q.appendTail("world");
 		q.appendTail("qq");
@@ -11,6 +11,9 @@ public class _7_QueueWithTwoStacksTest {
 		try {
 			str = q.deleteHead();
 			System.out.println(str);
+			q.appendTail("alibaba");
+			String str1 = q.deleteHead();
+			System.out.println(str1);
 		} catch (Exception e) {
 			System.out.println(e.getMessage());
 		}

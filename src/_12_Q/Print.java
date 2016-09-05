@@ -1,4 +1,4 @@
-package _12_;
+package _12_Q;
 
 //大数问题(未解决)
 public class Print {

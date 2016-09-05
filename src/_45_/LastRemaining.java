@@ -6,7 +6,7 @@ package _45_;
  * 约瑟夫环问题：递归公式*/
 public class LastRemaining {
 	public static int getLastRemaining(int n, int m) {
-		if(n<1||m<1){
+		if (n < 1 || m < 1) {
 			return -1;
 		}
 		if (n == 0) {

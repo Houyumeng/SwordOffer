@@ -12,12 +12,19 @@ public class TreeDepth {
 	}
 
 	// 判断二叉树是否是平衡二叉树
+	public static boolean isAVL(BinaryTreeNode root) {
+		int depth = 0;
+		return isAVL(root, depth);
+	}
+
 	public static boolean isAVL(BinaryTreeNode root, int depth) {
 		if (root == null) {
 			depth = 0;
 			return true;
 		}
+		// 左子树深度
 		int left = 0;
+		// 右子树深度
 		int right = 0;
 		if (isAVL(root.left, left) && isAVL(root.right, right)) {
 			int dif = left - right;

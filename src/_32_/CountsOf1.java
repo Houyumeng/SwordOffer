@@ -2,6 +2,7 @@ package _32_;
 
 /*
  * 输入一个数n，输出从1到n数中出现1的次数
+ *
  * 按每一位来考虑，
     1)此位大于1，这一位上1的个数有 ([n / 10^(b+1) ] + 1) * 10^b
     2)此位等于0，为 ([n / 10^(b+1) ] ) * 10^b
@@ -16,7 +17,7 @@ package _32_;
     注:以百位为例，百位出现1为100~199，*100的意思为单步出现了100~199，100次，
     *30是因为出现了30次100~199,+(43+1)是因为最后一次301**不完整导致。*/
 public class CountsOf1 {
-	public static long getCountsOf1(int n) {
+	public static long getCountsOf1(long n) {
 		if (n <= 0) {
 			return 0;
 		}

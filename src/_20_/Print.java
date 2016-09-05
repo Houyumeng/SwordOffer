@@ -1,5 +1,6 @@
 package _20_;
 
+/*À≥ ±’Î¥Ú”°æÿ’Û*/
 public class Print {
 	public static void printMatrixColockWisely(int[][] array, int rows, int columns) throws Exception {
 		if (array == null || columns <= 0 || rows <= 0) {

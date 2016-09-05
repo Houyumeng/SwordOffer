@@ -2,8 +2,10 @@ package _7_;
 
 import java.util.Stack;
 
-//两个栈实现队列
-public class _7_QueueWithTwoStacks<T> {
+/*两个栈实现队列
+ * stack1实现入队列
+ * stack2实现出队列*/
+public class QueueWithTwoStacks<T> {
 	private Stack<T> s1 = new Stack<>();
 	private Stack<T> s2 = new Stack<>();
 

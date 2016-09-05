@@ -49,14 +49,16 @@ public class PrintMinNumber {
 	public static boolean isSmall(String m, String n) {
 		String left = m + n;
 		String right = n + m;
-		boolean result = false;
-		for (int i = 0; i < left.length(); i++) {
-			if (left.charAt(i) < right.charAt(i)) {
+		int i = 0;
+		while (i < left.length()) {
+			if (left.charAt(i) == right.charAt(i)) {
+				i++;
+			} else if (left.charAt(i) < right.charAt(i)) {
 				return true;
 			} else {
 				return false;
 			}
 		}
-		return result;
+		return false;
 	}
 }

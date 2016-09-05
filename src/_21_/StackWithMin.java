@@ -4,14 +4,15 @@ package _21_;
 import java.util.Stack;
 
 public class StackWithMin<T extends Comparable<? super T>> {
-//	数据栈，存储数据
+	// 数据栈，存储数据
 	Stack<T> sData = new Stack<>();
-//	辅助栈，存储最小值
+	// 辅助栈，存储最小值
 	Stack<T> sMin = new Stack<>();
 
 	public void pushNew(T element) {
+
 		sData.push(element);
-//		sMin为空或者添加元素比sMin栈顶元素小
+		// sMin为空或者添加元素比sMin栈顶元素小
 		if (sMin.size() == 0 || element.compareTo(sMin.peek()) < 0) {
 			sMin.push(element);
 		} else {

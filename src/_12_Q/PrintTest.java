@@ -1,4 +1,4 @@
-package _12_;
+package _12_Q;
 
 public class PrintTest {
 

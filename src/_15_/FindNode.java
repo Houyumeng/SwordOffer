@@ -8,23 +8,20 @@ public class FindNode {
 		if (headNode == null || k <= 0) {
 			return null;
 		}
-		ListNode pi = headNode;
-		ListNode pj = headNode;
+		ListNode iNode = headNode;
+		ListNode jNode = headNode;
 		for (int i = 1; i < k; i++) {
-			if (pi.next != null) {
-				pi = pi.next;
+			if (iNode.next != null) {
+				iNode = iNode.next;
 			} else {
 				return null;
 			}
 		}
-		for (int i = k;; i++) {
-			if (pi.next == null) {
-				break;
-			}
-			pi = pi.next;
-			pj = pj.next;
+		while (iNode.next != null) {
+			iNode = iNode.next;
+			jNode = jNode.next;
 		}
-		return pj;
+		return jNode;
 	}
 }
 

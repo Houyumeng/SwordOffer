@@ -15,7 +15,7 @@ public class NumbersAppearsOnce {
 		int n = 0;
 		for (int j = 0; j < length; j++) {
 			if (is1Or0(array[j], indexOf1) == 1) {
-				m ^= array[j];
+				m ^= array[j]; //array[j]^0==array[j]
 			} else {
 				n ^= array[j];
 			}

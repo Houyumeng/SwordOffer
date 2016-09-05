@@ -3,7 +3,7 @@ package _4_;
 public class ReplaceSpaceTest {
 
 	public static void main(String[] args) {
-		String str = "  I am a man!";
+		String str = "  I am a man !";
 		String strReplaced = ReplaceSpace.replace(str);
 		System.out.println(strReplaced);
 		// StringµÄrepalceAll·½·¨

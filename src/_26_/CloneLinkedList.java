@@ -1,60 +1,68 @@
 package _26_;
-/*复制复杂链表，该复杂链表不仅有指向下一个结点的指针，也有任意指向的指针*/
+/*
+ * 复制复杂链表，该复杂链表不仅有指向下一个结点的指针，也有任意指向的指针*/
+
 public class CloneLinkedList {
-	public static ListNode cloneComelexLinkedList(ListNode pHead) {
-		cloneNodes(pHead);
-		cloneSibling(pHead);
-		return reconnectLinkedList(pHead);
+	public static ListNode cloneComelexLinkedList(ListNode head){
+		if (head == null) {
+			return null;
+		}
+		cloneNodes(head);
+		cloneSibling(head);
+		return reconnectLinkedList(head);
 	}
 
 	// 第一步：仅复制结点
-	public static void cloneNodes(ListNode pHead) {
-		ListNode pNode = pHead;
-		while (pNode != null) {
-			ListNode clonedPNode = new ListNode();
+	public static void cloneNodes(ListNode head) {
+		ListNode node = head;
+		while (node != null) {
+			ListNode clonednode = new ListNode();
 			// 复制数据到clonedPNode
-			clonedPNode.data = pNode.data;
-			clonedPNode.pNext = pNode.pNext;
-			clonedPNode.pSibling = null;
-			pNode.pNext = clonedPNode;
-			pNode = clonedPNode.pNext;
+			clonednode.data = node.data;
+			clonednode.next = node.next;
+			clonednode.sibling = null;
+			node.next = clonednode;
+			node = clonednode.next;
 		}
 	}
 
 	// 第二步：复制pSibling
-	public static void cloneSibling(ListNode pHead) {
-		ListNode pNode = pHead;
-		while (pNode != null) {
-			if (pNode.pSibling != null) {
+	public static void cloneSibling(ListNode head) {
+		ListNode node = head;
+		while (node != null) {
+			if (node.sibling != null) {
 
-				pNode.pNext.pSibling = pNode.pSibling.pNext;
+				node.next.sibling = node.sibling.next;
 			}
-			pNode = pNode.pNext.pNext;
+			node = node.next.next;
 		}
 	}
 
 	// 第三步：拆分链表
-	public static ListNode reconnectLinkedList(ListNode pHead) {
-		ListNode pNode = pHead;
-		ListNode pCloneNode = null;
-		ListNode pCloneHead = null;
-		if (pNode != null) {
-			pCloneHead = pCloneNode = pNode.pNext;
-			pNode.pNext = pCloneNode.pNext;
-			pNode = pNode.pNext;
+	public static ListNode reconnectLinkedList(ListNode head) {
+		ListNode headNode = head;
+		ListNode node = headNode;
+		ListNode cloneHeadNode = head.next;
+		ListNode cloneNode = cloneHeadNode;
+		while (cloneNode.next != null) {
+			node.next = cloneNode.next;
+			node = node.next;
+			cloneNode.next = node.next;
+			cloneNode = cloneNode.next;
 		}
-		while (pNode != null) {
-			pCloneNode.pNext = pNode.pNext;
-			pCloneNode = pCloneNode.pNext;
-			pNode.pNext = pCloneNode.pNext;
-			pNode = pNode.pNext;
-		}
-		return pCloneHead;
+		return cloneHeadNode;
+		/*
+		 * ListNode node = head; ListNode cloneNode = null; ListNode cloneHead =
+		 * null; if (node != null) { cloneHead = cloneNode = node.next;
+		 * node.next = cloneNode.next; node = node.next; } while (node != null)
+		 * { cloneNode.next = node.next; cloneNode = cloneNode.next; node.next =
+		 * cloneNode.next; node = node.next; } return cloneHead;
+		 */
 	}
 }
 
 class ListNode {
 	int data;
-	ListNode pNext;
-	ListNode pSibling;
+	ListNode next;
+	ListNode sibling;
 }

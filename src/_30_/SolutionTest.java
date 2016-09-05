@@ -7,7 +7,7 @@ public class SolutionTest {
 		int[] input = { 1, 3, 8, 6, 2, 4, 5 };
 		List<Integer> list;
 		try {
-			list = Solution.GetLeastNumbers_Solution(input, 13);
+			list = Solution.GetLeastNumbers_Solution(input, 5);
 			for (int i : list) {
 				System.out.print(i + " ");
 			}

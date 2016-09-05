@@ -16,7 +16,7 @@ public class FirstNotRepeatingChar {
 		Map<Character, Integer> map = new LinkedHashMap<>();
 		for (int i = 0; i < str.length(); i++) {
 			char ch = str.charAt(i);
-			Integer counts = map.get(ch);
+			Integer counts = map.get(ch);//³õÊ¼»¯
 			counts = (counts == null) ? 0 : counts;
 			map.put(ch, ++counts);
 		}

@@ -1,29 +1,29 @@
 package _13_;
 
 /*
- * 给定单向链表的头指针和一个节点，定义一个函数在O(1)时间删除该节点
+ * 给定单向链表的头指针和一个结点，定义一个函数在O(1)时间删除该结点
  */
 public class DeleteNode {
-	public static void deleteNode(ListNode pHead, ListNode pToBeDeleted) {
-		if (pToBeDeleted == null || pHead == null) {
+	public static void deleteNode(ListNode head, ListNode toBeDeleted) {
+		if (toBeDeleted == null || head == null) {
 			return;
-			// 删除头结点
-		} else if (pHead.next == null && pToBeDeleted == pHead) {
-			pHead = null;
+			// 仅有一个结点删除头结点也是尾结点
+		} else if (head.next == null && toBeDeleted == head) {
+			head = null;
 		}
 		// 删除的不是尾结点
-		else if (pToBeDeleted.next != null) {
-			pToBeDeleted.data = pToBeDeleted.next.data;
-			pToBeDeleted.next = pToBeDeleted.next.next;
-			pToBeDeleted.next = null;
+		else if (toBeDeleted.next != null) {
+			toBeDeleted.data = toBeDeleted.next.data;
+			toBeDeleted.next = toBeDeleted.next.next;
+			toBeDeleted.next = null;
 		}
 		// 删除尾结点
 		else {
-			pToBeDeleted = pHead;
-			while (pToBeDeleted.next.next != null) {
-				pToBeDeleted = pToBeDeleted.next;
+			ListNode node = head;
+			while (node.next != toBeDeleted) {
+				node = node.next;
 			}
-			pToBeDeleted.next = null;
+			node.next = null;
 		}
 	}
 }
